@@ -13,7 +13,6 @@ class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav>
           <div className="nav-wrapper white">
             <Link
               to="/"
@@ -26,68 +25,7 @@ class Navbar extends Component {
             >
               Woof Woof!
             </Link>
-            <a href="#" data-target="mobile-demo" className="sidenav-trigger">
-            <i className="material-icons" style={{color: "#000"}}>menu</i> 
-            </a>
-            <ul
-              className="right hide-on-med-and-down">
-              <li>
-                <Link
-                  to="/register"
-                  style={{
-                    width: "140px",
-                    borderRadius: "1.5px",
-                    letterSpacing: "1.5px"
-                  }}
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-                >
-                  Register
-              </Link>
-              </li>
-              <li>
-                <Link
-                  to="/login"
-                  style={{
-                    width: "140px",
-                    borderRadius: "3px",
-                    letterSpacing: "1.5px"
-                  }}
-                  className="btn btn-large btn-flat waves-effect white black-text"
-                >
-                  Log In
-              </Link>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <ul className="sidenav" id="mobile-demo">
-          <li>
-            <Link
-              to="/register"
-              style={{
-                width: "140px",
-                borderRadius: "1.5px",
-                letterSpacing: "1.5px"
-              }}
-              className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-            >
-              Register
-              </Link>
-          </li>
-          <li>
-            <Link
-              to="/login"
-              style={{
-                width: "140px",
-                borderRadius: "3px",
-                letterSpacing: "1.5px"
-              }}
-              className="btn btn-large btn-flat waves-effect white black-text"
-            >
-              Log In
-              </Link>
-          </li>
-        </ul>
+            </div>
       </div>
     );
   }

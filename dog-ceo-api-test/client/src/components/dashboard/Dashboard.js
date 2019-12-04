@@ -47,12 +47,40 @@ class Dashboard extends React.Component {
   render() {
     const { user } = this.props.auth;
     return (
-      <div style={{ height: "75vh" }} className="container valign-wrapper">
-        <div className="row center-align">
-          <div className="landing-copy col s12 center-align">
-            <h4>
-              <b>Hey there,</b> {user.name.split(" ")[0]}!</h4>
-            <h6>Select a dog breed: </h6>
+      <div className="container-fluid">
+        <div className="nav-wrapper white">
+          <Link
+            to="/"
+            style={{
+              fontFamily: "monospace",
+              fontSize: 28,
+              paddingLeft: 10
+            }}
+            className="col s5 brand-logo black-text"
+          >
+            Woof Woof!
+      </Link>
+          <div class="float-right">
+            <button
+              style={{
+                width: "140px",
+                borderRadius: "3px",
+                letterSpacing: "1.5px",
+                margin: "1rem"
+              }}
+              onClick={this.onLogoutClick}
+              className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+            >
+              Logout
+            </button>
+          </div>
+        </div>
+        <div style={{ height: "75vh" }} className="container valign-wrapper center-align">
+          <div className="row">
+            <div className="landing-copy col s12">
+              <h4>
+                <b>Hey there,</b> {user.name.split(" ")[0]}!</h4>
+              <h6>Select a dog breed: </h6>
             </div>
             {/* <span>{this.state.selectedOption}</span> */}
             <div className="input-field col s12">
@@ -80,23 +108,10 @@ class Dashboard extends React.Component {
                   Fetch!
             </Link>
               </div>
-              <div class="row">
-                <button
-                  style={{
-                    width: "150px",
-                    borderRadius: "3px",
-                    letterSpacing: "1.5px",
-                    marginTop: "1rem"
-                  }}
-                  onClick={this.onLogoutClick}
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-                >
-                  Logout
-            </button>
             </div>
           </div>
         </div>
-      </div >
+      </div>
     );
   }
 }
