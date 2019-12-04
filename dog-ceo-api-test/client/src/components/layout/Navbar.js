@@ -19,14 +19,15 @@ class Navbar extends Component {
               to="/"
               style={{
                 fontFamily: "monospace",
-                fontSize: 28
+                fontSize: 28,
+                paddingLeft: 10
               }}
               className="col s5 brand-logo black-text"
             >
               Woof Woof!
             </Link>
             <a href="#" data-target="mobile-demo" className="sidenav-trigger">
-            <i class="material-icons" style={{color: "#000"}}>menu</i> 
+            <i className="material-icons" style={{color: "#000"}}>menu</i> 
             </a>
             <ul
               className="right hide-on-med-and-down">

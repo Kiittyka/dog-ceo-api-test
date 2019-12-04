@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Details extends Component {
     constructor(props) {
@@ -22,16 +23,29 @@ class Details extends Component {
     }
     render() {
         return (
-            <div className="container valign-wrapper center-align ">
-                <div class="row center-align">
-                    <h6>Here's a picture of a cutie on each refresh!</h6>
-                    <img src={this.state.url} alt=""
-                        style={{
-                            width: 400,
-                            height: 300
-                        }}
-                        className="" />
+            <div className="container center-align">
+                <br />
+                <div class="row">
+                    <div class="col float-left">
+                        <Link to="/" className="btn-flat waves-effect">
+                            <i className="material-icons left">keyboard_backspace</i> Back to
+                            home
+                    </Link>
+                    </div>
+                    <div class="card col" style={{ width: 350 }}>
+                        <h6 style={{ fontFamily: "monospace" }}>Here's a picture of a cutie on each refresh!</h6>
+                        <img src={this.state.url} alt=""
+                            style={{
+                                width: 300,
+                                height: 300
+                            }}
+                            className="card-img-top img-responsive" />
+                        <div class="card-body">
+                            <h6 class="card-title" style={{ fontFamily: "monospace" }}>Dog breed: {this.state.breedName}</h6>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         );
     }
