@@ -99,11 +99,12 @@ class Dashboard extends React.Component {
                     pathname: `/details/${this.state.selectedOption}`
                   }}
                   style={{
-                    width: 100,
-                    height: 45,
+                    width: "140px",
+                    borderRadius: "3px",
                     letterSpacing: "1.5px",
+                    margin: "1rem"
                   }}
-                  className="btn btn-large btn-flat waves-effect white black-text display-inline"
+                  className="btn btn-large waves-effect waves-light hoverable blue accent-3 display-inline"
                 >
                   Fetch!
             </Link>

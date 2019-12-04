@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { logoutUser } from "../../actions/authActions";
 
 class Details extends Component {
     constructor(props) {
@@ -21,6 +24,10 @@ class Details extends Component {
             .then(data => this.setState({ url: data.message }));
         console.log(this.state.url)
     }
+    onLogoutClick = e => {
+        e.preventDefault();
+        this.props.logoutUser();
+    };
     render() {
         return (
             <div className="container-fluid">
@@ -60,6 +67,7 @@ class Details extends Component {
                                 home
                     </Link>
                         </div>
+                        </div>
                         <div class="col">
                             <h6 style={{ fontFamily: "monospace" }}>Here's a picture of a cutie on each refresh!</h6>
                             <img src={this.state.url} alt=""
@@ -74,9 +82,22 @@ class Details extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+          
         );
     }
 }
+Details.propTypes = {
+    logoutUser: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired,
+};
 
-export default Details;
+const mapStateToProps = state => ({
+    auth: state.auth,
+});
+
+export default connect(
+    mapStateToProps,
+    { logoutUser }
+)(Details);
+
+
