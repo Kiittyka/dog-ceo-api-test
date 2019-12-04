@@ -32,7 +32,7 @@ class Details extends Component {
                             home
                     </Link>
                     </div>
-                    <div class="card col" style={{ width: 350 }}>
+                    <div class="card col">
                         <h6 style={{ fontFamily: "monospace" }}>Here's a picture of a cutie on each refresh!</h6>
                         <img src={this.state.url} alt=""
                             style={{
