@@ -27,7 +27,7 @@ class Details extends Component {
     render() {
         return (
             <div className="container-fluid">
-                <div className="nav-wrapper white">
+                <div className="nav-wrapper white" style={{ margin: 15 }}>
                     <Link
                         to="/"
                         style={{

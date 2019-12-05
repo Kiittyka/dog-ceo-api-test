@@ -48,13 +48,12 @@ class Dashboard extends React.Component {
     const { user } = this.props.auth;
     return (
       <div className="container-fluid">
-        <div className="nav-wrapper white">
+        <div className="nav-wrapper white" style={{ margin: 15 }}>
           <Link
             to="/"
             style={{
               fontFamily: "monospace",
-              fontSize: 28,
-              paddingLeft: 10
+              fontSize: 28
             }}
             className="col s5 brand-logo black-text"
           >
@@ -63,13 +62,12 @@ class Dashboard extends React.Component {
           <div class="float-right">
             <button
               style={{
-                width: "140px",
                 borderRadius: "3px",
                 letterSpacing: "1.5px",
-                margin: "1rem"
+                marginTop: 5
               }}
               onClick={this.onLogoutClick}
-              className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+              className="btn btn-small waves-effect waves-light hoverable blue accent-3"
             >
               Logout
             </button>
@@ -99,15 +97,14 @@ class Dashboard extends React.Component {
                     pathname: `/details/${this.state.selectedOption}`
                   }}
                   style={{
-                    width: "140px",
                     borderRadius: "3px",
                     letterSpacing: "1.5px",
                     margin: "1rem"
                   }}
-                  className="btn btn-large waves-effect waves-light hoverable teal accent-3 display-inline"
+                  className="btn btn-small waves-effect waves-light hoverable teal accent-3 display-inline"
                 >
-                  Fetch!
-            </Link>
+                  <div style={{color: "#000"}}><span >Fetch</span><i class="material-icons" style={{ marginTop: 2 }}>pets</i></div>
+                </Link>
               </div>
             </div>
           </div>
