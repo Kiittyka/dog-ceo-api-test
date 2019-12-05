@@ -104,7 +104,7 @@ class Dashboard extends React.Component {
                     letterSpacing: "1.5px",
                     margin: "1rem"
                   }}
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3 display-inline"
+                  className="btn btn-large waves-effect waves-light hoverable teal accent-3 display-inline"
                 >
                   Fetch!
             </Link>

@@ -27,8 +27,10 @@ class Details extends Component {
     onLogoutClick = e => {
         e.preventDefault();
         this.props.logoutUser();
-    };
+      };
     render() {
+        
+        const { user } = this.props.auth;
         return (
             <div className="container-fluid">
                 <div className="nav-wrapper white">
@@ -62,7 +64,7 @@ class Details extends Component {
                     <br />
                     <div class="row">
                         <div class="col float-left">
-                            <Link to="/" className="btn-flat waves-effect">
+                            <Link to="/dashboard" className="btn-flat waves-effect">
                                 <i className="material-icons left">keyboard_backspace</i> Back to
                                 home
                     </Link>
