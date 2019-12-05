@@ -24,13 +24,7 @@ class Details extends Component {
             .then(data => this.setState({ url: data.message }));
         console.log(this.state.url)
     }
-    onLogoutClick = e => {
-        e.preventDefault();
-        this.props.logoutUser();
-      };
     render() {
-        
-        const { user } = this.props.auth;
         return (
             <div className="container-fluid">
                 <div className="nav-wrapper white">
@@ -44,21 +38,7 @@ class Details extends Component {
                         className="col s5 brand-logo black-text"
                     >
                         Woof Woof!
-      </Link>
-                    <div class="float-right">
-                        <button
-                            style={{
-                                width: "140px",
-                                borderRadius: "3px",
-                                letterSpacing: "1.5px",
-                                margin: "1rem"
-                            }}
-                            onClick={this.onLogoutClick}
-                            className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-                        >
-                            Logout
-            </button>
-                    </div>
+                </Link>
                 </div>
                 <div className="container center-align">
                     <br />
@@ -69,37 +49,27 @@ class Details extends Component {
                                 home
                     </Link>
                         </div>
-                        </div>
-                        <div class="col">
-                            <h6 style={{ fontFamily: "monospace" }}>Here's a picture of a cutie on each refresh!</h6>
-                            <img src={this.state.url} alt=""
-                                style={{
-                                    width: 300,
-                                    height: 300
-                                }}
-                                className="img-responsive fix-image" />
-                            <div class="card-body">
-                                <h6 class="card-title" style={{ fontFamily: "monospace" }}>Dog breed: {this.state.breedName}</h6>
-                            </div>
+                    </div>
+                    <div class="col">
+                        <h6 style={{ fontFamily: "monospace" }}>Here's a picture of a cutie on each refresh!</h6>
+                        <img src={this.state.url} alt=""
+                            style={{
+                                width: 300,
+                                height: 300
+                            }}
+                            className="img-responsive fix-image" />
+                        <div class="card-body">
+                            <h6 class="card-title" style={{ fontFamily: "monospace" }}>Dog breed: {this.state.breedName}</h6>
                         </div>
                     </div>
                 </div>
-          
+            </div>
+
         );
     }
 }
-Details.propTypes = {
-    logoutUser: PropTypes.func.isRequired,
-    auth: PropTypes.object.isRequired,
-};
 
-const mapStateToProps = state => ({
-    auth: state.auth,
-});
 
-export default connect(
-    mapStateToProps,
-    { logoutUser }
-)(Details);
+export default Details;
 
 
