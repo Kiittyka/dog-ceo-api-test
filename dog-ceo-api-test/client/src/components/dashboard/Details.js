@@ -59,7 +59,7 @@ class Details extends Component {
                             }}
                             className="img-responsive fix-image" />
                         <div class="card-body">
-                            <h6 class="card-title" style={{ fontFamily: "monospace" }}>Dog breed: {this.state.breedName}</h6>
+                            <h6 class="card-title" style={{ fontFamily: "monospace", fontWeight: "bold", fontSize: 24}}>{this.state.breedName}</h6>
                         </div>
                     </div>
                 </div>

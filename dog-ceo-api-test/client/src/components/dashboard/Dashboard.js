@@ -97,13 +97,14 @@ class Dashboard extends React.Component {
                     pathname: `/details/${this.state.selectedOption}`
                   }}
                   style={{
+                    height: 40,
                     borderRadius: "3px",
                     letterSpacing: "1.5px",
                     margin: "1rem"
                   }}
                   className="btn btn-small waves-effect waves-light hoverable teal accent-3 display-inline"
                 >
-                  <div style={{color: "#000"}}><span >Fetch</span><i class="material-icons" style={{ marginTop: 2 }}>pets</i></div>
+                  <div style={{color: "#000"}}><span>Fetch </span><i class="material-icons">pets</i></div>
                 </Link>
               </div>
             </div>
