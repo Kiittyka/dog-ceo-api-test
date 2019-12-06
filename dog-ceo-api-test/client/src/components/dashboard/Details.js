@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { logoutUser } from "../../actions/authActions";
 
 class Details extends Component {
     constructor(props) {
@@ -51,7 +48,7 @@ class Details extends Component {
                         </div>
                     </div>
                     <div class="col">
-                        <h6 style={{ fontFamily: "monospace" }}>Here's a picture of a cutie on each refresh!</h6>
+                        <h6 style={{ fontFamily: "monospace", marginTop: 75 }}>Here's a picture of a cutie on each refresh!</h6>
                         <img src={this.state.url} alt=""
                             style={{
                                 width: 300,
